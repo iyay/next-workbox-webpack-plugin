@@ -109,7 +109,7 @@ class NextWorkboxWebpackPlugin {
       {
         src: `${distDir}/static/${buildId}/pages`,
         route: f => `/_next/static/${buildId}/pages/${f}`,
-        filter: f => f === '_app.js' || f === 'index.js'
+        filter: f => /.js$/.test(f)
       }
     ];
 
